@@ -1,0 +1,19 @@
+<div class="jumbotron text-left">
+  <h1 class="display-4">{{user.name}}</h1>
+  <hr class="my-4">
+  <table class="table table-borderless">
+    <tr>
+      <th scope="row">username</th>
+      <td>{{user.username}}</td>
+    </tr>
+    <tr>
+      <th scope="row">email</th>
+      <td>{{user.email}}</td>
+    </tr>
+    <tr>
+      <th scope="row">phone</th>
+      <td>{{user.phone}}</td>
+    </tr>
+  </table>
+  <button class="btn btn-danger" role="button" (click)="onUserRemove(user)">Remove User</button>
+</div>

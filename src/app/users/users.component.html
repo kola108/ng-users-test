@@ -1,0 +1,6 @@
+<h1 class="m-5">Users</h1>
+<p *ngIf="users.length === 0 && usersAreLoaded">The users list is empty</p>
+<p *ngIf="!usersAreLoaded; else usersTemplate">Loading...</p>
+<ng-template #usersTemplate>
+  <app-user *ngFor="let user of users" [user]="user" (removeUser)="removeUser($event)"></app-user>
+</ng-template>
